@@ -8,6 +8,8 @@
        pip install discord.py
 - #### Flask
        pip install Flask
+- #### Asyncio
+       pip install asyncio
 
 <h1 align="center"></h1>
 
