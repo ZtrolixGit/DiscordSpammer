@@ -8,8 +8,6 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 token = '' #paste your discord bot token here
 
-Spamtime = False
-
 @tasks.loop(seconds=60)
 async def update_presence():
     await bot.change_presence(
@@ -26,9 +24,7 @@ async def spam(ctx, user: discord.User):
 
     await ctx.send(f"Spamming {user}")
 
-    Spamtime = True
-
-    while Spamtime:
+    while True:
         try:
             await user.send(f"SPAMMER 3.0!!")
             print(f"Spammed '{user}'")
@@ -37,13 +33,6 @@ async def spam(ctx, user: discord.User):
             await ctx.send(f"Unable to send a message to {user.name}. They may have DMs disabled or have blocked the bot.")
 
     await ctx.message.delete()
-
-@bot.command(name="stop-spam")
-async def spam(ctx, user: discord.User):
-
-    await ctx.send(f"Stopping spam for {user}")
-
-    Spamtime = False
 
 @bot.event
 async def on_ready():
