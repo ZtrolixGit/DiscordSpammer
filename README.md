@@ -1,4 +1,6 @@
 <h1 align="center">Discord Bot Spammer</h1>
+<h3 align="center">Educational purposes only!</h1>
+<h1 align="center"></h1>
 
 ### Dependencies!
 - #### Python 3.11 or above
